@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Libros</title>
+    <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/grafico.css">
+</head>
+<body>
+    
+    <div class="container-dash">
+<div id="encabezado">
+
+            <span id="usuario-logueado">  </span>
+
+            <span><a  href="#" id="editar-clave"> Cambiar Clave </a> </span>
+
+            <span><a  href="#" id="editar-usuario"> Cambiar nombre </a>   </span>
+
+            <span><a  href="#" id="cerrar-session"> Cerrar Sesi&oacute;n </a>  </span>
+</div>
+<div class="titulo-dash">
+<h1>Registro de Libros</h1>
+    <div class="datos"> 
+        <h3 class="tit-est">Datos Estadísticos </h3>
+        
+        <span class="datos-numericos"></span> 
+    </div>
+    
+    <div class="grafica"> 
+        <h3>Libros recomendados vs no recomendados</h3>
+        <div id="graficoBarras" class="grafico-contenedor">
+            <div id="barraRecomendados" class="barra barra-verde"></div>
+            <div id="barraNoRecomendados" class="barra barra-roja"></div>
+        </div>
+        <p>
+        ✔ Recomendados: <span id="txtRecomendados">0</span> |
+        ✘ No recomendados: <span id="txtNoRecomendados">0</span>
+        </p> 
+    </div>   
+</div>
+
+</div>
+<section class="dash-interno">
+
+    <form class="form-box - dash">
+
+        <label for="titulo">Título<input type="text" name="titulo" id="titulo" placeholder="ingrese el titulo..." required></label>
+        <label for="autor">Autor<input type="text" name="autor" id="autor" placeholder="ingrese el autor..." required></label>
+        <label for="fecha-lectura">Fecha Lectura<input type="date" name="fecha-lectura" id="fecha-lectura" required></label>
+        <label for="numero-pags">Número Páginas<input type="number"  name="numero-pags" id="numero-pags"  required></label>
+        
+        <span class="label">Recomendado:</span>
+        
+        <div  class="radiobuton"> 
+            <label class="lbrd"><span class="opt">SI</span> <input type="radio" name="recomendado" value="SI" class="rd"></label>
+            <label class="lbrd"><span class="opt">NO</span> <input type="radio" name="recomendado" value="NO" class="rd"></label>
+        </div>
+
+        <input type="submit" value="Agregar">
+
+    </form>
+
+
+
+
+    <div class="tabla">
+<table>
+    <thead>
+
+        <tr>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Fecha Lectura</th>
+            <th>Numero de Pags.</th>
+            <th>Recomendado</th>
+            <th>Accion</th>
+        </tr>
+    </thead>
+<tbody>
+
+
+</tbody>
+
+
+</table>
+
+    </div>
+
+</section>
+
+</div>
+
+<script src="js/addBook.js"></script>
+
+</body>
+</html>
